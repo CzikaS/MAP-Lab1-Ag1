@@ -62,4 +62,14 @@ public class GradeTools {
         }
     }
 
+    public int maxRoundedGrade(int[] grades){
+        int[] roundedGrades = roundedGrades(grades);
+        int maxGrade = roundedGrades[0];
+        for (int grade : grades){
+            if (grade > maxGrade)
+                maxGrade = grade;
+        }
+        return maxGrade;
+    }
+
 }

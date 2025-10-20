@@ -12,5 +12,6 @@ public class Main{
         System.out.println(Arrays.toString(gradeTools.getFailingGrades(grades)));
         System.out.println(gradeTools.average(grades));
         System.out.println(Arrays.toString(gradeTools.roundedGrades(grades)));
+        System.out.println(gradeTools.maxRoundedGrade(grades));
     }
 }
