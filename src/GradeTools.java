@@ -42,4 +42,24 @@ public class GradeTools {
         }
     }
 
+    public int[] roundedGrades(int[] grades){
+        if (verifyGrades(grades)){
+            int[] result = new int[grades.length];
+            for (int i=0; i< grades.length; i++){
+                if (grades[i] < 38 || grades[i] % 5 == 0)
+                    result[i] = grades[i];
+                else {
+                    int value = ((grades[i]/5)+1)*5;
+                    if ((value - grades[i]) < 3)
+                        result[i] = value;
+                    else
+                        result[i] = grades[i];
+                }
+            }
+            return result;
+        } else {
+            throw new AssertionError("Invalid grades");
+        }
+    }
+
 }
