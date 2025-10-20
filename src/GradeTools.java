@@ -31,4 +31,15 @@ public class GradeTools {
         }
     }
 
+    public double average(int[] grades){
+        if (verifyGrades(grades)){
+            int sum = 0;
+            for (int grade : grades)
+                sum += grade;
+            return (double) sum/grades.length;
+        } else{
+            throw new AssertionError("Grades are not valid");
+        }
+    }
+
 }
