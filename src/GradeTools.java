@@ -27,7 +27,7 @@ public class GradeTools {
 
             return failingGrades;
         } else{
-            throw new AssertionError("Grades are not valid.");
+            throw new Error("Grades are not valid.");
         }
     }
 
@@ -36,9 +36,10 @@ public class GradeTools {
             int sum = 0;
             for (int grade : grades)
                 sum += grade;
-            return (double) sum/grades.length;
+            double avg = (double) sum / grades.length;
+            return Math.floor(avg * 100) / 100.0;
         } else{
-            throw new AssertionError("Grades are not valid");
+            throw new Error("Grades are not valid");
         }
     }
 
@@ -58,7 +59,7 @@ public class GradeTools {
             }
             return result;
         } else {
-            throw new AssertionError("Invalid grades");
+            throw new Error("Invalid grades");
         }
     }
 
